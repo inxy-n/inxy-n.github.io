@@ -19,11 +19,24 @@ author: Chen
 # --- List of links in the navigation bar --- #
 ###############################################
 
-navbar-links:
-  Project: "project"
-  Lab: "lab"
-  Human practices: "human_practices"
+navbar-links: 
+  Project:
+    - Description: "project"
+    - Engineering: "project"
+    - Model: "project"
+    - Result: "project"
+    - Application: "project"
+  Lab:
+    - Protocol: "lab"
+    - Notebook: "lab"
+    - Experiment: "lab"
+    - Safety: "lab"
+  Human practices:
+    - Human Practicesl: "human_practices"
+    - Education: "human_practices"
+    - Public Engagement: "human_practices" 
   Team: "team"
+    
   
 
 ################
