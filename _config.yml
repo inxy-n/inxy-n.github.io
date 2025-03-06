@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: GTech Mission2
+title: Guangdong Technion IGEM Competition
 
 # Your name to show in the footer
-author: Chen and Ye
+author: Chen
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -22,7 +22,7 @@ author: Chen and Ye
 navbar-links:
   Project: "project"
   Lab: "lab"
-  Human practices: "humanpractices"
+  Human practices: "human_practices"
   Team: "team"
   
 
@@ -280,6 +280,11 @@ defaults:
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "index.md"
     values:
       layout: "page"
 
