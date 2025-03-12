@@ -2,7 +2,10 @@
 layout: page
 title: Quantum Aurora
 subtitle: BioLuminescent Harmony GTech Mission
+
 ---
+
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}">
 
 ## 啦啦啦
 
@@ -15,6 +18,68 @@ subtitle: BioLuminescent Harmony GTech Mission
 - Goal3
 
 ### Features
+
+- Features1
+- Features
+- Features3
+
+### Features
+
+- Features1
+- Features
+- Features3
+
+### Features
+
+- Features1
+- Features
+- Features3
+
+### Features
+
+- Features1
+- Features
+- Features3
+
+### Features
+
+- Features1
+- Features
+- Features3
+
+### Features
+
+- Features1
+- Features
+- Features3
+
+- Features1
+- Features
+- Features3
+
+- Features1
+- Features
+- Features3
+
+- Features1
+- Features
+- Features3
+
+- Features1
+- Features
+- Features3
+
+- Features1
+- Features
+- Features3
+
+- Features1
+- Features
+- Features3
+
+- Features1
+- Features
+- Features3
 
 - Features1
 - Features

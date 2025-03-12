@@ -1,0 +1,5 @@
+body {
+  background: url('/assets/img/stream-background.jpg') repeat-y center top;
+  background-size: cover;
+  background-attachment: fixed;
+}

@@ -276,7 +276,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
-
+include:
+  - assets
 kramdown:
   input: GFM
 
