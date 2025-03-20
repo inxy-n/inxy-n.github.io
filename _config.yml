@@ -31,11 +31,13 @@ navbar-links:
     - Notebook: "lab"
     - Experiment: "lab"
     - Safety: "lab"
-  Human practices:
+  Human Practices:
     - Human Practicesl: "human_practices"
     - Education: "human_practices"
     - Public Engagement: "human_practices" 
-  Team: "team"
+  Our Circle:
+    - Team: "team"
+    - Attributions: "attributions"
     
   
 

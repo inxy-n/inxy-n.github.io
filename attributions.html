@@ -1,0 +1,364 @@
+---
+layout: base
+title: "Attributions"
+permalink: /attributions/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Members and Attributions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+      color: #333;
+    }
+    
+    .container {
+      padding: 20px;
+      margin-left: 220px; /* 为导航栏留出空间 */
+    }
+    
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      scroll-margin-top: 110px;
+    }
+    
+    .second_card {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 1%;
+    }
+    
+    .card2 {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      width: 300px;
+    }
+    
+    .photo img {
+      width: 100px;
+      height: 110px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .role {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    
+    .description {
+      font-size: 14px;
+      color: #777;
+      line-height: 1.6;
+    }
+    
+    /* 个人卡片悬停效果 */
+    .profile {
+      position: relative;
+      width: 400px; /* 可根据实际情况调整 */
+      height: 400px; /* 可根据实际情况调整 */
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.5s ease;
+    }
+    
+    .profile .description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .profile:hover img {
+      opacity: 0;
+    }
+    
+    .profile:hover .description {
+      opacity: 1;
+    }
+    
+    .profile .description h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+    
+    .profile .description p {
+      margin: 0;
+      font-size: 16px;
+    }
+    
+    /* 导航栏样式 */
+    .navbar2 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    
+    .navbar2 a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+      width: 80%;
+    }
+    
+    .navbar2 a:hover {
+      background-color: #555;
+    }
+    
+    .navbar2 a.active {
+      background-color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar2" style="padding-top: 100px;">
+    <a href="#wet-lab" onclick="activateLink(event, this)">Wet Lab</a>
+    <a href="#dry-lab" onclick="activateLink(event, this)">Dry Lab</a>
+    <a href="#art" onclick="activateLink(event, this)">Art</a>
+    <a href="#wiki" onclick="activateLink(event, this)">Wiki</a>
+  </div>
+
+  <div class="container" style="padding-top: 110px;">
+    <h1 class="title" id="wet-lab">Wet Lab</h1>
+    <div class="second_card">
+      <!-- 示例卡片 -->
+      <div class="card2">
+        <div class="photo">
+          <img src="/assets/img/einstein.jpg" alt="Albert Einstein">
+        </div>
+        <h2>Albert Einstein</h2>
+        <p class="role">Theoretical Physicist</p>
+        <p class="description">
+          Developed the theory of relativity, reshaping our understanding of space, time, and gravity.
+        </p>
+      </div>
+      <div class="card2">
+        <div class="photo">
+          <img src="/assets/img/curie.jpg" alt="Marie Curie">
+        </div>
+        <h2>Marie Curie</h2>
+        <p class="role">Physicist &amp; Chemist</p>
+        <p class="description">
+          Pioneered research on radioactivity and became the first woman to win a Nobel Prize.
+        </p>
+      </div>
+    
+      <!-- Isaac Newton 卡片 -->
+      <div class="card2">
+        <div class="photo">
+          <img src="/assets/img/newton.jpg" alt="Isaac Newton">
+        </div>
+        <h2>Isaac Newton</h2>
+        <p class="role">Mathematician &amp; Physicist</p>
+        <p class="description">
+          Formulated the laws of motion and universal gravitation, laying the foundation of classical mechanics.
+        </p>
+      </div>
+    </div>
+    
+    <h1 class="title" id="dry-lab">Dry Lab</h1>
+    <div class="second_card">
+        <div class="card2">
+            <div class="photo">
+              <img src="/assets/img/tesla.jpg" alt="Nikola Tesla">
+            </div>
+            <h2>Nikola Tesla</h2>
+            <p class="role">Inventor &amp; Electrical Engineer</p>
+            <p class="description">
+              Made groundbreaking contributions to the development of alternating current (AC) electrical systems.
+            </p>
+          </div>
+        
+          <!-- Stephen Hawking 卡片 -->
+          <div class="card2">
+            <div class="photo">
+              <img src="/assets/img/hawking.jpg" alt="Stephen Hawking">
+            </div>
+            <h2>Stephen Hawking</h2>
+            <p class="role">Theoretical Physicist</p>
+            <p class="description">
+              Revolutionized our view of black holes and cosmology while battling ALS.
+            </p>
+          </div>
+        
+          <!-- Rosalind Franklin 卡片 -->
+          <div class="card2">
+            <div class="photo">
+              <img src="/assets/img/rosalind.jpg" alt="Rosalind Franklin">
+            </div>
+            <h2>Rosalind Franklin</h2>
+            <p class="role">Chemist &amp; X‑ray Crystallographer</p>
+            <p class="description">
+              Played a crucial role in discovering the double helix structure of DNA.
+            </p>
+          </div>
+    </div>
+    
+    <h1 class="title" id="art">Art</h1>
+    <div class="second_card">
+        <div class="card2">
+            <div class="photo">
+              <img src="/assets/img/da-vinci.png" alt="Leonardo da Vinci">
+            </div>
+            <h2>Leonardo da Vinci</h2>
+            <p class="role">Renaissance Polymath</p>
+            <p class="description">
+              Master painter, inventor, and scientist, best known for masterpieces like the Mona Lisa and The Last Supper.
+            </p>
+          </div>
+        
+          <!-- Pablo Picasso 卡片 -->
+          <div class="card2">
+            <div class="photo">
+              <img src="/assets/img/picasso.jpg" alt="Pablo Picasso">
+            </div>
+            <h2>Pablo Picasso</h2>
+            <p class="role">Painter & Sculptor</p>
+            <p class="description">
+              Co-founder of Cubism who revolutionized modern art with radical ideas and innovative techniques.
+            </p>
+          </div>
+        
+          <!-- Vincent van Gogh 卡片 -->
+          <div class="card2">
+            <div class="photo">
+              <img src="/assets/img/van-gogh.jpg" alt="Vincent van Gogh">
+            </div>
+            <h2>Vincent van Gogh</h2>
+            <p class="role">Post-Impressionist Painter</p>
+            <p class="description">
+              Famed for his emotional, swirling brushwork and iconic pieces such as The Starry Night.
+            </p>
+          </div>
+    </div>
+    
+    <h1 class="title" id="wiki">Wiki</h1>
+    <div class="second_card">
+        <div class="card2">
+            <div class="photo">
+              <img src="/assets/img/nailong.webp" alt="Milk Dragon">
+            </div>
+            <h2>Milk Dragon</h2>
+            <p class="role">Gentle Guardian</p>
+            <p class="description">
+              The Milk Dragon is celebrated for its nurturing care, much like a soothing rain that revitalizes the soul. Not only is it adorably charming, it also possesses a miraculous ability to heal and inspire hope and strength during challenging times.
+            </p>
+          </div>
+          
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  // 获取所有 section（这里以 h1.title 作为 section 标记）
+  const sections = document.querySelectorAll('h1.title');
+  // 获取所有导航链接
+  const navLinks = document.querySelectorAll('.navbar2 a');
+
+  // 设置 IntersectionObserver 参数，threshold 数值可根据实际需求调整
+  const observerOptions = {
+    root: null,            // 观察整个视窗
+    rootMargin: '-110px',
+    threshold: 1         // 当目标元素 60% 在可见区域时触发回调
+  };
+
+  // 定义观察器回调
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // 当某个 section 进入可视区域时，获取该 section 的 id
+        const sectionId = entry.target.getAttribute('id');
+        // 清除所有导航链接的激活状态
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          // 当链接的 href 与 sectionId 匹配时，为其添加 active 类
+          if (link.getAttribute('href') === '#' + sectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  };
+
+  // 创建 IntersectionObserver 实例
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  // 对每个 section 进行观察
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+    function activateLink(event, link) {
+      // 阻止默认锚点跳转
+      event.preventDefault();
+      
+      // 移除所有导航链接的 active 类
+      document.querySelectorAll('.navbar2 a').forEach(a => a.classList.remove('active'));
+      // 为当前点击的链接添加 active 类
+      //link.classList.add('active');
+      
+      // 获取目标元素并使用平滑滚动效果跳转
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      // 检查目标元素是否存在，然后平滑滚动
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  </script>
+</body>
+</html>
