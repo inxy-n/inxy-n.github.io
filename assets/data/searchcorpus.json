@@ -34,6 +34,14 @@
 }, 
  
 { 
+"title"    : "Attributions", 
+"desc"     : "Attributions", 
+"category" : "page", 
+"url"      : "/attributions/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
 "title"    : "Human Practices", 
 "desc"     : "Human Practices", 
 "category" : "page", 
