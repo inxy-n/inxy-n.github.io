@@ -512,6 +512,27 @@
     </div>
   </div>
   
+  <div id="color-picker-toggle" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: linear-gradient(45deg, red, yellow, green, blue); border-radius: 50%; cursor: pointer; z-index: 1000;"></div>
+  <div id="color-picker" style="position: fixed; bottom: 80px; right: 20px; width: 200px; background: white; border: 1px solid #ccc; border-radius: 10px; padding: 10px; display: none; z-index: 1000;">
+    <h3 style="margin: 0 0 10px; font-size: 16px; text-align: center;">调色板</h3>
+    <input type="color" id="color-input" style="width: 100%; margin-bottom: 10px;">
+    <input type="range" id="brightness-input" min="0.5" max="1.5" step="0.1" value="1" style="width: 100%; margin-bottom: 10px;">
+    <button id="apply-color" style="width: 100%; padding: 5px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">应用颜色</button>
+  </div>
+  <div id="navbar-color-picker" style="position: fixed; bottom: 250px; right: 20px; width: 200px; background: white; border: 1px solid #ccc; border-radius: 10px; padding: 10px; display: none; z-index: 1000;">
+    <h3 style="margin: 0 0 10px; font-size: 16px; text-align: center;">顶部导航栏颜色</h3>
+    <input type="color" id="navbar-color-input" style="width: 100%; margin-bottom: 10px;">
+    <input type="range" id="navbar-brightness-input" min="0.5" max="1.5" step="0.1" value="1" style="width: 100%; margin-bottom: 10px;">
+    <button id="apply-navbar-color" style="width: 100%; padding: 5px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">应用颜色</button>
+  </div>
+
+  <div id="background-color-picker" style="position: fixed; bottom: 420px; right: 20px; width: 200px; background: white; border: 1px solid #ccc; border-radius: 10px; padding: 10px; display: none; z-index: 1000;">
+    <h3 style="margin: 0 0 10px; font-size: 16px; text-align: center;">背景颜色</h3>
+    <input type="color" id="background-color-input" style="width: 100%; margin-bottom: 10px;">
+    <input type="range" id="background-brightness-input" min="0.5" max="1.5" step="0.1" value="1" style="width: 100%; margin-bottom: 10px;">
+    <button id="apply-background-color" style="width: 100%; padding: 5px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">应用颜色</button>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
   // 获取所有 section（这里以 h1.title 作为 section 标记）
@@ -570,6 +591,64 @@
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('color-picker-toggle');
+      const picker = document.getElementById('color-picker');
+      const navbarPicker = document.getElementById('navbar-color-picker');
+      const backgroundPicker = document.getElementById('background-color-picker');
+
+      const colorInput = document.getElementById('color-input');
+      const brightnessInput = document.getElementById('brightness-input');
+      const applyButton = document.getElementById('apply-color');
+
+      const navbarColorInput = document.getElementById('navbar-color-input');
+      const navbarBrightnessInput = document.getElementById('navbar-brightness-input');
+      const applyNavbarButton = document.getElementById('apply-navbar-color');
+
+      const backgroundColorInput = document.getElementById('background-color-input');
+      const backgroundBrightnessInput = document.getElementById('background-brightness-input');
+      const applyBackgroundButton = document.getElementById('apply-background-color');
+
+      // 显示/隐藏调色板
+      toggle.addEventListener('click', function () {
+        picker.style.display = picker.style.display === 'none' ? 'block' : 'none';
+        navbarPicker.style.display = navbarPicker.style.display === 'none' ? 'block' : 'none';
+        backgroundPicker.style.display = backgroundPicker.style.display === 'none' ? 'block' : 'none';
+      });
+
+      // 应用卡片颜色
+      applyButton.addEventListener('click', function () {
+        const selectedColor = colorInput.value;
+        const brightness = brightnessInput.value;
+        const elements = document.querySelectorAll('.card2');
+        elements.forEach(element => {
+          element.style.backgroundColor = selectedColor;
+          element.style.filter = `brightness(${brightness})`;
+        });
+        picker.style.display = 'block'; // 确保调色板仍然可见
+      });
+
+      // 应用顶部导航栏颜色
+      applyNavbarButton.addEventListener('click', function () {
+        const selectedColor = navbarColorInput.value;
+        const brightness = navbarBrightnessInput.value;
+        const topNavbar = document.querySelector('nav'); // 修改顶部导航栏选择器
+        if (topNavbar) {
+          topNavbar.style.backgroundColor = selectedColor;
+          topNavbar.style.filter = `brightness(${brightness})`;
+        }
+      });
+
+      // 应用背景颜色
+      applyBackgroundButton.addEventListener('click', function () {
+        const selectedColor = backgroundColorInput.value;
+        const brightness = backgroundBrightnessInput.value;
+        document.body.style.backgroundColor = selectedColor;
+        document.body.style.filter = `brightness(${brightness})`;
+        backgroundPicker.style.display = 'block'; // 确保调色板仍然可见
+      });
+    });
   </script>
 </body>
 </html>
