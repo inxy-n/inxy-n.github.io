@@ -25,7 +25,7 @@
   
 
   
-  <link rel="alternate" type="application/rss+xml" title="Guangdong Technion IGEM Competition" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Guangdong Technion IGEM Competition" href="http://localhost:4000/feed.xml">
   
 
   
@@ -85,13 +85,13 @@
   <meta property="og:description" content="Team Members and Attributions Wet Lab Dry Lab Art Wiki Wet Lab Albert Einstein Theoretical Physicist Developed the theory of relativity, reshaping our understanding of space, time, and gravity. Marie Curie Physicist &amp;amp; Chemist Pioneered research on radioactivity and became the first woman to win a Nobel Prize. Isaac Newton...">
 
   
-  <meta property="og:image" content="/assets/img/avatar-icon.png">
+  <meta property="og:image" content="http://localhost:4000/assets/img/avatar-icon.png">
   
 
   
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/attributions/">
-  <link rel="canonical" href="/attributions/">
+  <meta property="og:url" content="http://localhost:4000/attributions/">
+  <link rel="canonical" href="http://localhost:4000/attributions/">
   
 
   
@@ -104,7 +104,7 @@
   <meta property="twitter:description" content="Team Members and Attributions Wet Lab Dry Lab Art Wiki Wet Lab Albert Einstein Theoretical Physicist Developed the theory of relativity, reshaping our understanding of space, time, and gravity. Marie Curie Physicist &amp;amp; Chemist Pioneered research on radioactivity and became the first woman to win a Nobel Prize. Isaac Newton...">
 
   
-  <meta name="twitter:image" content="/assets/img/avatar-icon.png">
+  <meta name="twitter:image" content="http://localhost:4000/assets/img/avatar-icon.png">
   
 
   
@@ -126,7 +126,7 @@
   
 
 
-  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="/">Guangdong Technion IGEM Competition</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Guangdong Technion IGEM Competition</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -183,7 +183,7 @@
   
     <div class="avatar-container">
       <div class="avatar-img-border">
-        <a href="/">
+        <a href="http://localhost:4000/">
           <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/avatar-icon.png" />
         </a>
       </div>
@@ -610,11 +610,21 @@
       const backgroundBrightnessInput = document.getElementById('background-brightness-input');
       const applyBackgroundButton = document.getElementById('apply-background-color');
 
+      // 确保调色板按钮始终固定在页面右下角
+      toggle.style.position = 'fixed';
+      toggle.style.bottom = '20px';
+      toggle.style.right = '20px';
+
       // 显示/隐藏调色板
       toggle.addEventListener('click', function () {
         picker.style.display = picker.style.display === 'none' ? 'block' : 'none';
         navbarPicker.style.display = navbarPicker.style.display === 'none' ? 'block' : 'none';
         backgroundPicker.style.display = backgroundPicker.style.display === 'none' ? 'block' : 'none';
+      });
+
+      // 监听窗口滚动事件，确保按钮位置不变
+      window.addEventListener('scroll', function () {
+        toggle.style.position = 'fixed';
       });
 
       // 应用卡片颜色
@@ -737,7 +747,7 @@
       
         &nbsp;&bull;&nbsp;
         <span class="author-site">
-          <a href="/">MyWebsite.com</a>
+          <a href="http://localhost:4000/">MyWebsite.com</a>
         </span>
       
 
