@@ -283,9 +283,18 @@ img {
   {% else %}
   min-width: 0;
   width: 100%;
+  left:0;
   word-break: break-word;
   {% endif %}
 }
+.navbar-custom:nth-child(2) .nav-item.dropdown .dropdown-menu{
+	width: 130%;
+}
+
+/* :nth-child(n)  n是第几个框,修改宽度 */
+
+
+
 
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   padding: 0.625rem;
@@ -403,56 +412,7 @@ img {
     width: 100%;
   }
 }
-/* 导航栏，背景和过渡效果 */
-.navbar2 {
-  background-color: #333;
-  transition: height 0.3s ease;
-  overflow: hidden; /* 初始时只显示主菜单 */
-}
-/* 将所有菜单项用 Flex 容器靠右排列，
-   并使用 align-items: stretch 让整体高度统一 */
-.nav-items {
-  display: flex;
-  justify-content: flex-end;
-  align-items: stretch;
-}
-/* 每个菜单项容器垂直布局，其内的元素靠右对齐 */
-.nav-item-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-left: 20px; /* 菜单项之间的间隔 */
-}
-/* 一级菜单链接样式 */
-.menu2 {
-  display: block;
-  padding: 15px 20px;
-  color: #fff;
-  text-decoration: none;
-}
-.menu2:hover {
-  background-color: #575757;
-}
-/* 二级菜单 .submenu 默认不显示，且采用竖向排列 */
-.submenu {
-  display: none;
-  flex-direction: column; 
-}
-/* 二级菜单链接样式 */
-.submenu a {
-  display: block;
-  padding: 5px 10px;
-  color: #fff;
-  text-decoration: none;
-}
-.submenu a:hover {
-  background-color: #666;
-}
-/* 当导航栏处于扩展状态时，显示全部二级菜单，
-   整个导航区域高度会统一由最高的菜单项撑开 */
-.navbar.expanded .submenu {
-  display: flex;
-}
+
 /* --- Footer --- */
 
 footer {
