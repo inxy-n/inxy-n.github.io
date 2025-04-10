@@ -7,7 +7,13 @@ let BeautifulJekyllJS = {
 
   init : function() {
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
-
+    const navbar = document.getElementById('navbar2');
+    navbar.addEventListener('mouseenter', () => {
+      navbar.classList.add('expanded');
+    });
+    navbar.addEventListener('mouseleave', () => {
+      navbar.classList.remove('expanded');
+    });
     // Shorten the navbar after scrolling a little bit down
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
